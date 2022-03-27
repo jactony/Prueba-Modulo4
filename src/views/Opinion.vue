@@ -22,7 +22,7 @@
                 class="accordion-button"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
+                :data-bs-target="`#collapseOne-${adminComentario.infoUsuario.id}`"
                 aria-expanded="true"
                 aria-controls="collapseOne">
                 <dt>
@@ -33,14 +33,14 @@
               </button>
             </h2>
             <div
-              id="collapseOne"
+              :id="`collapseOne-${adminComentario.infoUsuario.id}`"
               class="accordion-collapse collapse"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample">
               <div class="accordion-body text-start">
                 <h5>
-                  <strong> Opinión sobre el Juego: </strong
-                  >{{ adminComentario.infoUsuario.comento }}
+                  <strong> Opinión sobre el Juego: </strong>
+                  {{ adminComentario.infoUsuario.comento }}
                 </h5>
               </div>
             </div>
@@ -50,7 +50,8 @@
 
       <!-- acordeon de bootstrap -->
     </div>
-    <!-- {{getJuegosyComentarios}} -->
+    
+    
   </div>
 </template>
 
